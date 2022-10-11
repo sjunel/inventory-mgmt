@@ -1,8 +1,16 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
+import initializePgp from 'pg-promise';
 
 const app = express();
 dotenv.config();
+
+const connection = {
+  database: process.env.DB_NAME,
+  password: process.env.USR_PW
+};
+const pgp = initializePgp();
+const db = pgp(connection);
 
 const PORT = process.env.PORT;
 
