@@ -1,0 +1,14 @@
+{
+  "name": "inventory-mgmt",
+  "version": "1.0.0",
+  "description": "Management tool to track inventory of choice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
