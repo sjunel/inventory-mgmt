@@ -9,8 +9,8 @@ const connection = {
   database: process.env.DB_NAME,
   password: process.env.USR_PW
 };
-const pgp = initializePgp();
-const db = pgp(connection);
+const pgp = initializePgp({});
+export const db = pgp(connection);
 
 const PORT = process.env.PORT;
 
@@ -21,3 +21,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, ()=> {
   console.log(`Listening on port ${PORT}`);
 });
+
+export default app;
