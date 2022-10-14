@@ -1,6 +1,7 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import initializePgp from 'pg-promise';
+import { engine } from 'express-handlebars';
 
 const app = express();
 dotenv.config();
@@ -14,8 +15,12 @@ export const db = pgp(connection);
 
 const PORT = process.env.PORT;
 
+app.engine('handlebars', engine({}));
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
 app.get('/', (req, res) => {
-  res.send('Your skincare inventory!');
+  res.render('home');
 });
 
 app.listen(PORT, ()=> {
