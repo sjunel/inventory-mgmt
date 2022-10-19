@@ -21,8 +21,12 @@ app.set('views', './views');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.render('home');
+app.get('/', async (req, res) => {
+  let rows = await db.any(`SELECT * FROM products`);
+
+  res.render('home', {
+    rows
+  });
 });
 
 app.listen(PORT, ()=> {

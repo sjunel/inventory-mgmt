@@ -33,7 +33,21 @@
           </a>
         </div>
       </div>
-
+      {{#if rows}}
+      {{#each rows}}
+      <div class="col">
+        <div class="card">
+          <a href="#placeholder-photo">
+            <div class="card-body">
+              <h5 class="card-title">{{this.brand_name}}</h5>
+              <p class="card-text">{{this.product_name}} at ${{this.price}} for {{this.fill_size_oz}} fl oz.</p>
+            </div>
+          </a>
+          <a href="#delete" class="btn btn-primary">Delete</a>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
       <div class="col-6">
         <div class="card-body">
           <h5 class="card-title">Getting started?</h5>
@@ -41,18 +55,7 @@
           <img src="/images/arrow-left.png" class="img-fluid" alt="Left arrow">
         </div>
       </div>
-
-      <div class="col">
-        <div class="card">
-          <a href="#placeholder-photo">
-            <div class="card-body">
-              <h5 class="card-title">Placeholder Photo</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </a>
-          <a href="#delete" class="btn btn-primary">Delete</a>
-        </div>
-      </div>
+      {{/if}}
 
     </div>
   </div>
