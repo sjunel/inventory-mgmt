@@ -1,55 +1,7 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-h1, p {
-  color: #242F35;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0 10px;
-}
-
-.nav-bar {
-  list-style: none;
-  text-align: end;
-}
-
-.nav-bar li {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0 10px;
-}
-
-.nav-bar a {
-  text-decoration: none;
-}
-
-#deal-alert span {
-  vertical-align: middle;
-}
-
-.cover img {
-  width: 100%;
-}
-
-.content-slot {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25%;
-  padding: 0 10px;
+.cover {
+  text-align: center;
 }
 
 #add-circle {
   width: 100%;
-}
-
-.footer-logos {
-  text-align: center;
-}
-
-.footer-logos div {
-  display: inline-block;
 }
