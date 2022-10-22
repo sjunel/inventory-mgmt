@@ -20,6 +20,12 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, ()=> {
   console.log(`Listening on port ${PORT}`);
+}).on('error', (e) => {
+  if (e.code === 'EADDRINUSE') {
+    console.log(`${PORT} is already in use`);
+  } else {
+    throw e;
+  }
 });
 
 export default app;
