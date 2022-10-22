@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit",
-    "start": "npx nodemon index.js"
+    "start": "npx nodemon index.js",
+    "setupDB": "dropdb inventory-mgmt && createdb inventory-mgmt && psql -d inventory-mgmt < schema.sql"
   },
   "author": "",
   "license": "ISC",
