@@ -5,6 +5,5 @@ CREATE TABLE products (
   active_ing varchar,
   price numeric,
   fill_size_oz int,
-  fill_size_ml int,
   qty int
 );
