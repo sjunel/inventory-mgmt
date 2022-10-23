@@ -3,5 +3,10 @@
 }
 
 #add-circle {
+  margin: 30px 0;
   width: 100%;
+}
+
+.modal {
+  --bs-bg-opacity: 0.5;
 }
