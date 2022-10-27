@@ -7,7 +7,6 @@ describe('GET /', () => {
 
     expect(res.header['content-type']).toBe('text/html; charset=utf-8');
     expect(res.statusCode).toBe(200);
-    expect(res.text).toEqual('Your skincare inventory!');
   });
 });
 
